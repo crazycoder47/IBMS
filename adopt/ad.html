@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+        <title>Dogs</title>
+      
+       <style type="text/css">
+
+                          *{
+                             margin: 0px;
+                             padding: 0px;
+                           }
+                     body{
+                             font-family: arial;
+                     }
+
+                    .main{
+    
+                             margin: 2%;
+                         }
+                         .logo {
+    width: 160px;
+    height: 130px;
+}
+
+nav {
+    background-color: #f4f4f4; /* Header background color for consistency */
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+}
+
+.login-button a {
+    color: white;
+    background-color: #000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.login-button a:hover {
+    background-color: #333;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    list-style: none;
+    z-index: 1;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu li a {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    display: block;
+    color: black;
+}
+
+.submenu li a:hover {
+    background-color: #ddd;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+                    .card{
+                             width: 30%;
+                             display: inline-block;
+                             box-shadow: 2px 2px 20px black;
+                             border-radius: 15px; 
+                             margin: 2%;
+     
+                         }
+
+                .image img{
+                             width: 100%;
+                             border-top-right-radius: 5px;
+                             border-top-left-radius: 5px;
+                          }
+
+                 .title{
+ 
+                             text-align: center;
+                             padding: 10px;
+  
+                        }
+
+                    h1{
+                             font-size: 20px;
+                        }
+
+                     h2{
+                             font-size: 15px;
+                             color: chartreuse;
+                        } 
+
+                   .des{
+                             padding: 3px;
+                             text-align: center;
+                             padding-top: 10px;
+                             border-bottom-right-radius: 5px;
+                             border-bottom-left-radius: 5px;
+                        }
+
+                    button{
+                             margin-top: 40px;
+                             margin-bottom: 10px;
+                             background-color: white;
+                             border: 1px solid black;
+                             border-radius: 5px;
+                             padding:10px;
+                    }
+
+            button:hover{
+                             background-color: black;
+                             color: white;
+                             transition: .5s;
+                             cursor: pointer;
+                         }
+
+                         footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-logo img {
+    width: 160px;
+    height: auto;
+}
+
+.footer-links, .footer-legal, .footer-social, .footer-actions {
+    flex: 1 1 200px;
+    margin: 1rem 0;
+}
+
+.footer-links h3, .footer-legal h3, .footer-social h3, .footer-actions h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.footer-links ul, .footer-legal ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li, .footer-legal ul li, .footer-social ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a, .footer-legal ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover, .footer-legal ul li a:hover {
+    color: #fff;
+}
+
+.footer-social ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social ul li a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+    transition: filter 0.3s;
+}
+
+.footer-social ul li a img:hover {
+    filter: invert(0.8);
+}
+
+.footer-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.footer-actions button:hover {
+    background-color: #555;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .image-text {
+        flex-direction: column;
+    }
+
+    .image-text img,
+    .image-text .text {
+        width: 100%;
+    }
+}
+
+
+      </style>
+    </head>  
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo_li"><a href="/./index.html"><img class="logo" src="/./logos.png" alt="Logo"></a></li>
+                <li class="about"><a href="/./about us.html">About Us</a></li>
+                <li class="adopt">
+                    <a href="#adopt">Adopt</a>
+                    <ul class="submenu">
+                        <li><a href="./ad.html">Dog</a></li>
+                        <li><a href="./ac.html">Cat</a></li>
+                    </ul>
+                </li>
+                <li class="process">
+                    <a href="/adoption process/step to adopt.html">Adoption Process</a>
+                    <ul class="submenu">
+                        <li><a href="/adoption process/step to adopt.html">Step to Adopt</a></li>
+                        <li><a href="/adoption process/step to adopt.html">Adoption Form</a></li>
+                    </ul>
+                </li>
+                <li class="support">
+                    <a href="/./support us/support us.html">Support Us</a>
+                    <ul class="submenu">
+                        <li><a href="/./support us/support us.html">Donate</a></li>
+                        <li><a href="/./support us/support us.html">Volunteer</a></li>
+                        <li><a href="/./support us/support us.html">Join</a></li>
+                    </ul>
+                </li>
+                <li class="login-button">
+                    <a href="/./login form/login.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+    
+              <div class="card">
+    
+                    <div class="image">
+                           <img src="one.webp">
+               </div>
+                     <div class="title">
+                                  <h1>Rocky</h1>
+                                  <h2>Age: 4</h2>
+                                  <h2>Breed: Labrador retriever </h2>
+                     </div>
+                           <div class="des">
+                                  <p>Labrador retriever is also known as lab and Labrador. It is one of the most popular dogs in India. It is also known as one of the best family dogs. They easily adjust to various environments. Labrador is the best choice for people thinking of becoming pet parents for the first time as they are human-friendly and do not have any high maintenance requirements.They are short-haired with thick skin and are easily available in different colors such as black, white, brown, and cream. They are hardworking, intelligent, and can be trained very easily. Labradors are bulky and very cute dogs in nature and require exercise on a daily basis.They have a life expectancy of 10-14 years and shed moderately.</p>
+    <button>Read More...</button>
+    </div>
+    </div>
+
+        
+             <div class="card">
+        
+                     <div class="image">
+                            <img src="two.jpg">
+                    </div>
+                            <div class="title">
+                                          <h1>Max</h1>
+                                           <h2>Age: 4</h2>
+                                           <h2>Breed:German shepherds</h2>
+                          </div>
+                                <div class="des">
+                                                <p>German shepherds are also known as one of the best guard dogs. They have keen smelling and detecting skills compared to other breeds, because of which they are mostly used by military or guard work. The name German Shepherd is derived from their origin which is Germany, and they were used for herding sheep. They are the most intelligent and quick-learning dog breed compared to others. They come in different colors which are; red black and tan black with thick double-coated skin. If you are looking for a dog with utmost loyalty, then a German shepherd would be the best choice for you. They usually weigh around 25-35 kgs with a life span of 9-13 years. </p>
+        <button>Read More...</button>
+        </div>
+        </div>
+    
+
+           
+            <div class="card">
+           
+                            <div class="image">
+                                 <img src="three.jpg">
+                            </div>
+                                        <div class="title">
+                                                     <h1> Rana</h1>
+                                                     <h2>Age: 8</h2>
+                                                     <h2>Breed:Siberian Husky</h2>
+                                        </div>
+                                             <div class="des">
+                                                           <p>Siberian Husky originated from Siberia and is commonly known as Husky or Sibe. They are highly intelligent, friendly, and gentle dog breeds. They gained immense popularity due to their thick fur coat and wolf-like body. They have a double coat that is thicker than most dog breeds. The undercoat is dense and fine, while on the other hand, the topcoat is long and thAs their bodies are built to protect them effectively against the harsh Arctic winds they won’t thrive well in humid conditions.You can always give them cold treats after a long summer afternoon. They normally weigh around 15-30 kgs and the life span for a husky is 13-15 years. </p>
+           <button>Read More...</button>
+           </div>
+           </div>
+           
+           <div class="card">
+           
+                     <div class="image">
+                                 <img src="four.jpg">
+                     </div>
+                        <div class="title">
+                                    <h1>Tiger</h1>
+                                     <h2>Age: 10</h2>
+                                     <h2>Breed:Golden Retrievers</h2>
+                                      </div>
+                                     <div class="des">
+                                 <p>Golden Retrievers are one of the most famous dogs in India when it comes to family dogs. The name Retriever refers to the breed’s ability to retrieve things. Their obedient and loving nature makes them more adorable. With their origin from Scotland, they are medium-sized and good-looking dogs. They are covered with a water-repelling inner coat and dense outer coat. Excessive shedding could be a problem, especially during the winter season. They tend to suffer from obesity, various infections, arthritis, and many more. They weigh around 25-35 kgs and their lifespan is 10-12 years. </p>
+            <button>Read More...</button>
+            </div>
+            </div>
+ 
+
+          
+           <div class="card">
+           
+                     <div class="image">
+                       <img src="seven.jpg">
+                  </div>
+                      <div class="title">
+                            <h1> Luna</h1>
+                          <h2>Age: 7</h2>
+                         <h2>Breed:Pomeranian</h2>
+                         </div>
+                            <div class="des">
+                                           <p>Pomeranian is a small size Spitz-type dog that is named after the Pomeranian region in Poland and northern Germany. This breed gained popularity in the 18th century as a royal dog. Queen Victoria owned a small Pomeranian and soon this breed became universally popular Pomeranian looks like a smaller version of an Indian Spitz, but they are two completely different breeds.Poms are well known for their adorable appearance. They have a thick double coat that looks extremely fluffy and soft. The outer coat is long, straight, and coarse in texture, while the inner coat is short and sofThey are typically friendly, playful, and lively. Being vigilant about the environment, they often tend to be aggressive on hearing strange noises.</p>
+           <button>Read More...</button>
+           </div>
+           </div>
+
+
+           <div class="card">
+           
+                <div class="image">
+                       <img src="five.jpg">
+             </div>
+                 <div class="title">
+                         <h1> Ace</h1>
+                         <h2>Age: 3</h2>
+                        <h2>Breed:Pug</h2>
+                   </div>
+                            <div class="des">
+                                      <p>Originating from China, Pugs are one of the most famous dog breeds in India. Their ability to adapt to small apartments makes them the ideal choice for an Indian household. They are the sturdiest members of the toy group due to their mastiff heritage. They are also one of the oldest and ancient dog breeds in the world. Pugs are also known as “Vodafone ka Kutta” due to a famous ad campaign broadcasted by Vodafone. Since then, they have made a special place in the hearts of many dog lovers. Not only that, they are extremely charming, clever, playful, and mischievous. They are good for families with children as they are calm and patient.</p>
+            <button>Read More...</button>
+            </div>
+            </div>
+ 
+            <div class="card">
+           
+                <div class="image">
+                       <img src="six.jpg">
+                 </div>
+                         <div class="title">
+                                   <h1> Chopper</h1>
+                                   <h2>Age: 5</h2>
+                                   <h2>Breed: Rottweiler</h2>
+                        </div>
+                                 <div class="des">
+                                             <p>If you are looking for a dog who is loving and compassionate and also fierce enough to protect you and your house, then a rottweiler is the best choice for you.Rottweilers are very well known for their strength and dominant naturewhich makes them a good fit to work as a military dogs or a police dogs. They are very famous in India for guarding houses and farms for their owners. Rottweilers are exceptionally alert about their surroundings and have a great natural protective instinct.</p>
+                <button>Read More...</button>
+                </div>
+                </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+           <div class="footer-logo">
+               <a href="/index.html"><img src="/./logos.png" alt="AdoptMeNow Logo"></a>
+           </div>
+           <div class="footer-links">
+               <h3>Quick Links</h3>
+               <ul>
+                   <li><a href="/about us.html">About Us</a></li>
+                   <li><a href="/adopt/ac.html">Adopt</a></li>
+                   <li><a href="/adoption process/step to adopt.html">Adoption Process</a></li>
+                   <li><a href="/support us/support us.html">Support Us</a></li>
+                   <li><a href="/adoption process/contact.html">Contact Us</a></li>
+               </ul>
+           </div>
+           <div class="footer-legal">
+               <h3>Legal</h3>
+               <ul>
+                   <li><a href="/policy/policy.html">Privacy Policy</a></li>
+                   <li><a href="/policy/policy.html">Terms of Service</a></li>
+               </ul>
+           </div>
+           <div class="footer-social">
+               <h3>Follow Us</h3>
+               <ul>
+                   <li><a href="https://www.instagram.com/adoptmenow_07?igsh=MTJoNmlhOWJ2ZnNodQ=="><img src="/./facebook.jpeg" alt="Facebook"></a></li>
+                   <li><a href="https://www.instagram.com/adoptmenow_07?igsh=MTJoNmlhOWJ2ZnNodQ=="><img src="/./twitter.jpeg" alt="Twitter"></a></li>
+                   <li><a href="https://www.instagram.com/adoptmenow_07?igsh=MTJoNmlhOWJ2ZnNodQ=="><img src="/./instagram.jpeg" alt="Instagram"></a></li>
+                   <li><a href="https://www.instagram.com/adoptmenow_07?igsh=MTJoNmlhOWJ2ZnNodQ=="><img src="/./linkedin.png" alt="LinkedIn"></a></li>
+               </ul>
+           </div>
+           <div class="footer-actions">
+               <h3>Get Involved</h3>
+               <button onclick="location.href='http://127.0.0.1:3000/support us/support us.html'">Donate</button>
+               <button onclick="location.href='http://127.0.0.1:3000/support us/support us.html'">Volunteer</button>
+               <button onclick="location.href='http://127.0.0.1:3000/support us/support us.html'">Join</button>
+               <button onclick="location.href='http://127.0.0.1:3000/adoption process/contact.html'">Contact</button>
+           </div>
+       </div>
+       <div class="footer-bottom">
+           <p>&copy; 2024 AdoptMeNow. All Rights Reserved.</p>
+       </div>
+    </footer>
+    </body>
+    </html>

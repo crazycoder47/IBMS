@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+        <title>Cats</title>
+      
+       <style type="text/css">
+
+                          *{
+                             margin: 0px;
+                             padding: 0px;
+                           }
+                     body{
+                             font-family: arial;
+                     }
+
+                    
+.logo {
+    width: 160px;
+    height: 130px;
+}
+
+nav {
+    background-color: #f4f4f4; 
+        padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+}
+
+.login-button a {
+    color: white;
+    background-color: #000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.login-button a:hover {
+    background-color: #333;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    list-style: none;
+    z-index: 1;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu li a {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    display: block;
+    color: black;
+}
+
+.submenu li a:hover {
+    background-color: #ddd;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+                    .main{
+    
+                             margin: 2%;
+                         }
+
+                    .card{
+                             width: 30%;
+                             display: inline-block;
+                             box-shadow: 2px 2px 20px black;
+                             border-radius: 15px; 
+                             margin: 2%;
+     
+                         }
+
+                .image img{
+                             width: 100%;
+                             border-top-right-radius: 5px;
+                             border-top-left-radius: 5px;
+                          }
+
+                 .title{
+ 
+                             text-align: center;
+                             padding: 10px;
+  
+                        }
+
+                    h1{
+                             font-size: 20px;
+                        }
+                        
+                     h2{
+                             font-size: 15px;
+                             color: chartreuse;
+                        } 
+
+                   .des{
+                             padding: 3px;
+                             text-align: center;
+                             padding-top: 10px;
+                             border-bottom-right-radius: 5px;
+                             border-bottom-left-radius: 5px;
+                        }
+
+                    button{
+                             margin-top: 40px;
+                             margin-bottom: 10px;
+                             background-color: white;
+                             border: 1px solid black;
+                             border-radius: 5px;
+                             padding:10px;
+                    }
+
+            button:hover{
+                             background-color: black;
+                             color: white;
+                             transition: .5s;
+                             cursor: pointer;
+                         }
+
+                         footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-logo img {
+    width: 160px;
+    height: auto;
+}
+
+.footer-links, .footer-legal, .footer-social, .footer-actions {
+    flex: 1 1 200px;
+    margin: 1rem 0;
+}
+
+.footer-links h3, .footer-legal h3, .footer-social h3, .footer-actions h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.footer-links ul, .footer-legal ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li, .footer-legal ul li, .footer-social ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a, .footer-legal ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover, .footer-legal ul li a:hover {
+    color: #fff;
+}
+
+.footer-social ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social ul li a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+    transition: filter 0.3s;
+}
+
+.footer-social ul li a img:hover {
+    filter: invert(0.8);
+}
+
+.footer-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.footer-actions button:hover {
+    background-color: #555;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .image-text {
+        flex-direction: column;
+    }
+
+    .image-text img,
+    .image-text .text {
+        width: 100%;
+    }
+}
+
+
+      </style>
+    </head>  
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo_li"><a href="/./index.html"><img class="logo" src="/./logos.png" alt="Logo"></a></li>
+                <li class="about"><a href="/./about us.html">About Us</a></li>
+                <li class="adopt">
+                    <a href="#adopt">Adopt</a>
+                    <ul class="submenu">
+                        <li><a href="./ad.html">Dog</a></li>
+                        <li><a href="./ac.html">Cat</a></li>
+                    </ul>
+                </li>
+                <li class="process">
+                    <a href="/adoption process/step to adopt.html">Adoption Process</a>
+                    <ul class="submenu">
+                        <li><a href="/adoption process/step to adopt.html">Step to Adopt</a></li>
+                        <li><a href="/adoption process/step to adopt.html">Adoption Form</a></li>
+                    </ul>
+                </li>
+                <li class="support">
+                    <a href="/./support us/support us.html">Support Us</a>
+                    <ul class="submenu">
+                        <li><a href="/./support us/support us.html">Donate</a></li>
+                        <li><a href="/./support us/support us.html">Volunteer</a></li>
+                        <li><a href="/./support us/support us.html">Join</a></li>
+                    </ul>
+                </li>
+                <li class="login-button">
+                    <a href="/./login form/login.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header> 
+
+    <div class="main">
+    
+             <div class="card">
+        
+                     <div class="image">
+                            <img src="b.jpg">
+                    </div>
+                            <div class="title">
+                                          <h1>Lily</h1>
+                                           <h2>Age: 4</h2>
+                                           <h2>Breed:Maine Coon</h2>
+                          </div>
+                                <div class="des">
+                                                <p>Maine Coons are super friendly, sociable and lovingly called ‘gentle giants’. They can grow up to 10 kg and 40 inches in size. They adapt to domestic living easily, and are a great choice for families with children. However, due to their longer coat, it is important to keep them cool, well-groomed and hydrated in summer. Suitable for Indian climate Life expectancy: 12 - 15 years. </p>
+        <button>Read More...</button>
+        </div>
+        </div>
+
+        <div class="card">
+        
+            <div class="image">
+                   <img src="cd.jpg">
+           </div>
+                   <div class="title">
+                                 <h1>Zeo</h1>
+                                  <h2>Age: 4</h2>
+                                  <h2>Breed:Persian Cat</h2>
+                 </div>
+                       <div class="des">
+                                       <p>Persian Cats are one of the cutest cat breeds out there! They have a gorgeous coat, beautiful eyes and chubby cheeks. They are lovely indoor cats who love watching the world go by. They want to be the centre of your attention, but are equally content in their own company. Be prepared to groom and pamper them daily! Suitable for Indian climate Life expectancy: 12 - 15 years. </p>
+<button>Read More...</button>
+</div>
+</div>
+
+
+           <div class="card">
+        
+            <div class="image">
+                   <img src="dc.jpg">
+           </div>
+                   <div class="title">
+                                 <h1>Nala</h1>
+                                  <h2>Age: 4</h2>
+                                  <h2>Breed:Himalayan Cat</h2>
+                 </div>
+                       <div class="des">
+                                       <p>Himalayan Cats are gentle and quiet balls of fur who make excellent indoor pets. They love a good cuddle session, but are also happy playing and keeping themselves entertained. However, they are notoriously fussy eaters and prone to health troubles. Understand their diets, and invest in quality cat food. Suitable for Indian climate Life expectancy: 9 - 15 years. </p>
+<button>Read More...</button>
+</div>
+</div>
+
+               <div class="card">
+        
+                <div class="image">
+                       <img src="e.jpg">
+               </div>
+                       <div class="title">
+                                     <h1>Ruby</h1>
+                                      <h2>Age: 4</h2>
+                                      <h2>Breed:Abyssinian</h2>
+                     </div>
+                           <div class="des">
+                                           <p>If you are looking for good cat breeds who are friendly with children as well as other cats or pets, the Abyssinian is your perfect companion! They are adored for their playful and inquisitive spirits, and short, low-maintenance coats. Just keep them active and engaged with stimulating cat toys! Suitable for Indian climate Life expectancy: 9 - 15 years. </p>
+   <button>Read More...</button>
+   </div>
+   </div>
+
+                <div class="card">
+        
+                    <div class="image">
+                           <img src="f.jpg" width="50px">
+                   </div>
+                           <div class="title">
+                                         <h1>Aria</h1>
+                                          <h2>Age: 4</h2>
+                                          <h2>Breed:Sphynx Cat</h2>
+                         </div>
+                               <div class="des">
+                                               <p>Hairless and wrinkly, Sphynx Cats are unique cat breeds. Contrary to popular opinion, they actually have quite silly personalities, and form very strong, affectionate bonds with their humans! They just need some extra warmth during the colder months, and regular baths all-season to prevent oil build-up on the skin. Suitable for Indian climate Life expectancy: 6 - 18 years. </p>
+       <button>Read More...</button>
+       </div>
+       </div>
+                   
+                       <div class="card">
+    
+                        <div class="image">
+                               <img src="h.jpg">
+                   </div>
+                         <div class="title">
+                                      <h1>Tom</h1>
+                                      <h2>Age: 2</h2>
+                                      <h2>Breed: Bombay Cat </h2>
+                         </div>
+                               <div class="des">
+                                      <p>Bombay Cats are one of the most affectionate and smart small cat breeds—it’s adorable to see how confidently they demand pets! With their sleek black coats and striking eyes, they are beautiful, like mini Black Panthers. They require minimum grooming and happily adapt to homes of any size. It’s super easy to train them too, with a few yummy cat treats! Suitable for Indian climate Life expectancy: 9 - 13 years.</p>
+        <button>Read More...</button>
+        </div>
+        </div>
+            
+                     <div class="card">
+        
+                        <div class="image">
+                               <img src="g.jpg">
+                       </div>
+                               <div class="title">
+                                             <h1>Coco</h1>
+                                              <h2>Age: 4</h2>
+                                              <h2>Breed:Ragdoll Cat</h2>
+                             </div>
+                                   <div class="des">
+                                                   <p>True to their name, Ragdoll Cats have adorable, doll-like features and silky coats—one of the cutest cat breeds out there! You will find these gentle cats spending most of their time calmly curled up on the floor, or following their favourite human like a shadow! Suitable for Indian climate Life expectancy: 12 - 15 years. </p>
+           <button>Read More...</button>
+           </div>
+           </div>         
+  </div>
+  <footer>
+    <div class="footer-container">
+   <div class="footer-logo">
+       <a href="/index.html"><img src="/./logos.png" alt="AdoptMeNow Logo"></a>
+   </div>
+   <div class="footer-links">
+       <h3>Quick Links</h3>
+       <ul>
+           <li><a href="/about us.html">About Us</a></li>
+           <li><a href="/adopt/ac.html">Adopt</a></li>
+           <li><a href="/adoption process/step to adopt.html">Adoption Process</a></li>
+           <li><a href="/support us/support us.html">Support Us</a></li>
+           <li><a href="/adoption process/contact.html">Contact Us</a></li>
+       </ul>
+   </div>
+   <div class="footer-legal">
+       <h3>Legal</h3>
+       <ul>
+           <li><a href="/policy/policy.html">Privacy Policy</a></li>
+           <li><a href="/policy/policy.html">Terms of Service</a></li>
+       </ul>
+   </div>
+   <div class="footer-social">
+       <h3>Follow Us</h3>
+       <ul>
+           <li><a href="https://www.instagram.com/adoptmenow_07?igsh=MTJoNmlhOWJ2ZnNodQ=="><img src="/./facebook.jpeg" alt="Facebook"></a></li>
+           <li><a href="https://www.instagram.com/adoptmenow_07?igsh=MTJoNmlhOWJ2ZnNodQ=="><img src="/./twitter.jpeg" alt="Twitter"></a></li>
+           <li><a href="https://www.instagram.com/adoptmenow_07?igsh=MTJoNmlhOWJ2ZnNodQ=="><img src="/./instagram.jpeg" alt="Instagram"></a></li>
+           <li><a href="https://www.instagram.com/adoptmenow_07?igsh=MTJoNmlhOWJ2ZnNodQ=="><img src="/./linkedin.png" alt="LinkedIn"></a></li>
+       </ul>
+   </div>
+   <div class="footer-actions">
+       <h3>Get Involved</h3>
+       <button onclick="location.href='http://127.0.0.1:3000/support us/support us.html'">Donate</button>
+       <button onclick="location.href='http://127.0.0.1:3000/support us/support us.html'">Volunteer</button>
+       <button onclick="location.href='http://127.0.0.1:3000/support us/support us.html'">Join</button>
+       <button onclick="location.href='http://127.0.0.1:3000/adoption process/contact.html'">Contact</button>
+   </div>
+</div>
+<div class="footer-bottom">
+   <p>&copy; 2024 AdoptMeNow. All Rights Reserved.</p>
+</div>
+</footer>
+</body>
+</html>
